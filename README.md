@@ -1,6 +1,8 @@
 # Flatpickr Contao component
 A shim repositoy for [Flatpickr](https://github.com/flatpickr/flatpickr) as [Contao Component](https://github.com/contao-components/installer).
 
+Branch 1.1 based on Flatpickr 4.2.
+
 ## Install
 
 ```
