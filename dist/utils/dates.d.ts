@@ -11,8 +11,8 @@ export declare const createDateParser: ({ config, l10n }: {
 }) => (date: string | number | Date, givenFormat?: string | undefined, timeless?: boolean | undefined) => Date | undefined;
 export declare function compareDates(date1: Date, date2: Date, timeless?: boolean): number;
 export declare function compareTimes(date1: Date, date2: Date): number;
-export declare const monthToStr: (monthNumber: number, shorthand: boolean, locale: Locale) => string;
 export declare const getWeek: (givenDate: Date) => number;
+export declare const isBetween: (ts: number, ts1: number, ts2: number) => boolean;
 export declare const duration: {
     DAY: number;
 };

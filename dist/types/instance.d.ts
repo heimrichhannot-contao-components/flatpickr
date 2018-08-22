@@ -9,7 +9,7 @@ export interface Elements {
     mobileInput?: HTMLInputElement;
     mobileFormatStr?: string;
     selectedDateElem?: DayElement;
-    todayDateElem?: HTMLSpanElement;
+    todayDateElem?: DayElement;
     _positionElement: HTMLElement;
     weekdayContainer: HTMLDivElement;
     calendarContainer: HTMLDivElement;
@@ -19,9 +19,9 @@ export interface Elements {
     days: HTMLDivElement;
     weekWrapper?: HTMLDivElement;
     weekNumbers?: HTMLDivElement;
-    oldCurMonth?: HTMLSpanElement;
-    navigationCurrentMonth: HTMLSpanElement;
     monthNav: HTMLDivElement;
+    yearElements: HTMLInputElement[];
+    monthElements: HTMLSpanElement[];
     currentYearElement: HTMLInputElement;
     currentMonthElement: HTMLSpanElement;
     _hidePrevMonthArrow: boolean;
@@ -63,7 +63,7 @@ export declare type Instance = Elements & Formatting & {
     destroy: () => void;
     isEnabled: (date: DateOption, timeless?: boolean) => boolean;
     jumpToDate: (date?: DateOption) => void;
-    open: (e?: Event, positionElement?: HTMLElement) => void;
+    open: (e?: FocusEvent | MouseEvent, positionElement?: HTMLElement) => void;
     redraw: () => void;
     set: (option: keyof Options | {
         [k in keyof Options]?: Options[k];
@@ -77,6 +77,9 @@ export declare type Instance = Elements & Formatting & {
         event: string;
         element: Element;
         handler: (e?: Event) => void;
+        options?: {
+            capture?: boolean;
+        };
     }[];
     _bind: <E extends Element>(element: E | E[], event: string | string[], handler: (e?: any) => void) => void;
     _createElement: <E extends HTMLElement>(tag: keyof HTMLElementTagNameMap, className: string, content?: string) => E;
@@ -84,12 +87,13 @@ export declare type Instance = Elements & Formatting & {
     _debouncedChange: () => void;
     __hideNextMonthArrow: boolean;
     __hidePrevMonthArrow: boolean;
+    _positionCalendar: (customPositionElement?: HTMLElement) => void;
     utils: {
         getDaysInMonth: (month?: number, year?: number) => number;
     };
 };
 export interface FlatpickrFn {
-    (selector: NodeList | HTMLElement | string, config: Options): Instance | Instance[];
+    (selector: NodeList | HTMLElement | string, config?: Options): Instance | Instance[];
     defaultConfig: ParsedOptions;
     l10ns: {
         [k in LocaleKey]?: CustomLocale;
