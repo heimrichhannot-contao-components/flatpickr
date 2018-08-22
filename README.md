@@ -1,13 +1,13 @@
 # Flatpickr Contao component
 A shim repositoy for [Flatpickr](https://github.com/flatpickr/flatpickr) as [Contao Component](https://github.com/contao-components/installer).
 
+Branch 1.0 based on Flatpickr 4.1.
+
 ## Install
 
 ```
 composer require heimrichhannot-contao-components/flatpickr
 ```
-
-
 ## Config
 
 Add the following to your config (keep keys to prevent double integration):
