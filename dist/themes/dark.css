@@ -18,9 +18,9 @@
           box-sizing: border-box;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
-  background: rgba(63,68,88,0.98);
-  -webkit-box-shadow: 1px 0 0 #3f4458, -1px 0 0 #3f4458, 0 1px 0 #3f4458, 0 -1px 0 #3f4458, 0 3px 13px rgba(0,0,0,0.08);
-          box-shadow: 1px 0 0 #3f4458, -1px 0 0 #3f4458, 0 1px 0 #3f4458, 0 -1px 0 #3f4458, 0 3px 13px rgba(0,0,0,0.08);
+  background: #3f4458;
+  -webkit-box-shadow: 1px 0 0 #20222c, -1px 0 0 #20222c, 0 1px 0 #20222c, 0 -1px 0 #20222c, 0 3px 13px rgba(0,0,0,0.08);
+          box-shadow: 1px 0 0 #20222c, -1px 0 0 #20222c, 0 1px 0 #20222c, 0 -1px 0 #20222c, 0 3px 13px rgba(0,0,0,0.08);
 }
 .flatpickr-calendar.open,
 .flatpickr-calendar.inline {
@@ -68,7 +68,7 @@
 }
 .flatpickr-calendar.showTimeInput.hasTime .flatpickr-time {
   height: 40px;
-  border-top: 1px solid #3f4458;
+  border-top: 1px solid #20222c;
 }
 .flatpickr-calendar.noCalendar.hasTime .flatpickr-time {
   height: auto;
@@ -102,20 +102,20 @@
   bottom: 100%;
 }
 .flatpickr-calendar.arrowTop:before {
-  border-bottom-color: #3f4458;
+  border-bottom-color: #20222c;
 }
 .flatpickr-calendar.arrowTop:after {
-  border-bottom-color: rgba(63,68,88,0.98);
+  border-bottom-color: #3f4458;
 }
 .flatpickr-calendar.arrowBottom:before,
 .flatpickr-calendar.arrowBottom:after {
   top: 100%;
 }
 .flatpickr-calendar.arrowBottom:before {
-  border-top-color: #3f4458;
+  border-top-color: #20222c;
 }
 .flatpickr-calendar.arrowBottom:after {
-  border-top-color: rgba(63,68,88,0.98);
+  border-top-color: #3f4458;
 }
 .flatpickr-calendar:focus {
   outline: 0;
@@ -234,6 +234,11 @@
 .numInputWrapper input::-ms-clear {
   display: none;
 }
+.numInputWrapper input::-webkit-outer-spin-button,
+.numInputWrapper input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
 .numInputWrapper span {
   position: absolute;
   right: 0;
@@ -345,6 +350,9 @@
   border: 0;
   border-radius: 0;
   vertical-align: initial;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 .flatpickr-current-month input.cur-year:focus {
   outline: 0;
@@ -441,8 +449,8 @@ span.flatpickr-weekday {
   opacity: 1;
 }
 .dayContainer + .dayContainer {
-  -webkit-box-shadow: -1px 0 0 #3f4458;
-          box-shadow: -1px 0 0 #3f4458;
+  -webkit-box-shadow: -1px 0 0 #20222c;
+          box-shadow: -1px 0 0 #20222c;
 }
 .flatpickr-day {
   background: none;
@@ -483,8 +491,8 @@ span.flatpickr-weekday {
 .flatpickr-day.nextMonthDay:focus {
   cursor: pointer;
   outline: 0;
-  background: rgba(100,108,140,0.98);
-  border-color: rgba(100,108,140,0.98);
+  background: #646c8c;
+  border-color: #646c8c;
 }
 .flatpickr-day.today {
   border-color: #eee;
@@ -542,8 +550,8 @@ span.flatpickr-weekday {
 }
 .flatpickr-day.inRange {
   border-radius: 0;
-  -webkit-box-shadow: -5px 0 0 rgba(100,108,140,0.98), 5px 0 0 rgba(100,108,140,0.98);
-          box-shadow: -5px 0 0 rgba(100,108,140,0.98), 5px 0 0 rgba(100,108,140,0.98);
+  -webkit-box-shadow: -5px 0 0 #646c8c, 5px 0 0 #646c8c;
+          box-shadow: -5px 0 0 #646c8c, 5px 0 0 #646c8c;
 }
 .flatpickr-day.disabled,
 .flatpickr-day.disabled:hover,
@@ -579,8 +587,8 @@ span.flatpickr-weekday {
 }
 .flatpickr-weekwrapper .flatpickr-weeks {
   padding: 0 12px;
-  -webkit-box-shadow: 1px 0 0 #3f4458;
-          box-shadow: 1px 0 0 #3f4458;
+  -webkit-box-shadow: 1px 0 0 #20222c;
+          box-shadow: 1px 0 0 #20222c;
 }
 .flatpickr-weekwrapper .flatpickr-weekday {
   float: none;
@@ -670,6 +678,9 @@ span.flatpickr-weekday {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 .flatpickr-time input.flatpickr-hour {
   font-weight: bold;
@@ -706,9 +717,11 @@ span.flatpickr-weekday {
   text-align: center;
   font-weight: 400;
 }
+.flatpickr-time input:hover,
 .flatpickr-time .flatpickr-am-pm:hover,
+.flatpickr-time input:focus,
 .flatpickr-time .flatpickr-am-pm:focus {
-  background: rgba(109,118,151,0.98);
+  background: #6a7395;
 }
 .flatpickr-input[readonly] {
   cursor: pointer;

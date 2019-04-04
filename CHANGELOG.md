@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.4.0] - 2019-04-04
+
+* lib version 4.5.7
+
 ## [1.3.0] - 2018-08-22
 
 #### Added

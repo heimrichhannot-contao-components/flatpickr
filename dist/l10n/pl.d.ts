@@ -7,6 +7,7 @@ declare const _default: {
     tr?: CustomLocale | undefined;
     ar?: CustomLocale | undefined;
     at?: CustomLocale | undefined;
+    az?: CustomLocale | undefined;
     be?: CustomLocale | undefined;
     bg?: CustomLocale | undefined;
     bn?: CustomLocale | undefined;
@@ -21,15 +22,18 @@ declare const _default: {
     et?: CustomLocale | undefined;
     fa?: CustomLocale | undefined;
     fi?: CustomLocale | undefined;
+    fo?: CustomLocale | undefined;
     fr?: CustomLocale | undefined;
     gr?: CustomLocale | undefined;
     he?: CustomLocale | undefined;
     hi?: CustomLocale | undefined;
     hu?: CustomLocale | undefined;
     id?: CustomLocale | undefined;
+    is?: CustomLocale | undefined;
     it?: CustomLocale | undefined;
     ja?: CustomLocale | undefined;
     ko?: CustomLocale | undefined;
+    km?: CustomLocale | undefined;
     kz?: CustomLocale | undefined;
     lt?: CustomLocale | undefined;
     lv?: CustomLocale | undefined;
@@ -53,25 +57,8 @@ declare const _default: {
     uk?: CustomLocale | undefined;
     vn?: CustomLocale | undefined;
     zh?: CustomLocale | undefined;
+    zh_tw?: CustomLocale | undefined;
 } & {
-    default: {
-        weekdays: {
-            shorthand: [string, string, string, string, string, string, string];
-            longhand: [string, string, string, string, string, string, string];
-        };
-        months: {
-            shorthand: [string, string, string, string, string, string, string, string, string, string, string, string];
-            longhand: [string, string, string, string, string, string, string, string, string, string, string, string];
-        };
-        daysInMonth: [number, number, number, number, number, number, number, number, number, number, number, number];
-        firstDayOfWeek: number;
-        ordinal: (nth: number) => string;
-        rangeSeparator: string;
-        weekAbbreviation: string;
-        scrollTitle: string;
-        toggleTitle: string;
-        amPM: [string, string];
-        yearAriaLabel: string;
-    };
+    default: import("../types/locale").Locale;
 };
 export default _default;
